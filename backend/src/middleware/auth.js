@@ -12,3 +12,4 @@ export async function auth(req, res, next) {
 }
 export const requireSeller = (req,res,next) => req.user?.role === 'seller' && req.user.sellerStatus === 'approved' ? next() : res.status(403).json({ message: 'Approved seller access required' });
 export const requireAdmin = (req,res,next) => req.user?.role === 'admin' ? next() : res.status(403).json({ message: 'Administrator access required' });
+

@@ -1,9 +1,19 @@
 {
-  "homepage": "https://kartstore-org.netlify.app/",
-  "name": "kartstore-marketplace",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["backend", "frontend"],
-  "scripts": {"dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"", "start": "npm run start -w backend", "build": "npm run build -w frontend", "seed:admin": "npm run seed:admin -w backend"},
-  "devDependencies": {"concurrently": "^9.1.2"}
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "start": "npm run start -w backend",
+    "build": "npm run build -w frontend",
+    "seed:admin": "npm run seed:admin -w backend"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^9.1.2",
+    "vite": "^8.3.8"
+  }
 }
